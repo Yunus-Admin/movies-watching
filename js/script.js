@@ -17,3 +17,5 @@ const rating2 = +prompt("How much would you rate it?", "");
 
 personalMoviesDB.movies[lastMovieWatched] = rating;
 personalMoviesDB.movies[lastMovieWatched2] = rating2;
+
+console.log(personalMoviesDB);
