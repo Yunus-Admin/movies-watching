@@ -10,12 +10,20 @@ const personalMoviesDB = {
   private: false,
 };
 
-const lastMovieWatched = prompt("One of the last movies watched?", "");
-const rating = +prompt("How much would you rate it?", "");
-const lastMovieWatched2 = prompt("One of the last movies watched?", "");
-const rating2 = +prompt("How much would you rate it?", "");
-
-personalMoviesDB.movies[lastMovieWatched] = rating;
-personalMoviesDB.movies[lastMovieWatched2] = rating2;
+for (let i = 0; i < 2; i++) {
+  const lastMovieWatched = prompt("One of the last movies watched?", "");
+  const rating = +prompt("How much would you rate it?", "");
+  if (
+    lastMovieWatched !== null &&
+    rating != null &&
+    lastMovieWatched !== "" &&
+    rating != "" &&
+    lastMovieWatched.length < 50
+  ) {
+    personalMoviesDB.movies[lastMovieWatched] = rating;
+  } else {
+    --i;
+  }
+}
 
 console.log(personalMoviesDB);
