@@ -73,3 +73,8 @@ const personalMoviesDB = {
     });
   },
 };
+
+personalMoviesDB.start();
+personalMoviesDB.rememberMyFilms();
+personalMoviesDB.detectPersonalLevel();
+personalMoviesDB.writeYourGenres();
